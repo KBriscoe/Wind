@@ -89,10 +89,7 @@ public class MainActivity extends FragmentActivity {
         transaction.replace(R.id.advertiser_fragment_container, advertiserFragment);
 
         transaction.commit(); */
-    }
-
-    private void accessPairing(View view) {
-        pairingButton = (Button)findViewById(R.id.pairingButton);
+        pairingButton = findViewById(R.id.pairingButton);
         pairingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,6 +99,10 @@ public class MainActivity extends FragmentActivity {
                 startActivity(intent);
             }
         });
+    }
+
+    private void accessPairing(View view) {
+
     }
 
     private void showErrorText(int messageId) {
