@@ -1,5 +1,6 @@
 package wind.bluetooth;
 
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -11,13 +12,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
+import android.view.View;
 
 public class MainActivity extends FragmentActivity {
+    //final String PREFS_NAME = "MyPrefsFile";
+    //SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
     private BluetoothAdapter mBluetoothAdapter;
-
+    private Button pairingButton;
     //Would prefer not to use a @RequiresApi
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
@@ -25,7 +28,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        //Checking Bluetooth Settings
         if (savedInstanceState == null) {
             //The commented statement is supposed to be for lower androids, newer ones use the current statement
             //mBluetoothAdapter = mBluetoothAdapter.getDefaultAdapter();
@@ -37,18 +40,18 @@ public class MainActivity extends FragmentActivity {
                 if (mBluetoothAdapter.isEnabled()) {
                     // Everything is supported and enabled, load the fragments.
                     setupFragments();
-                }else {
+                } else {
 
                     // Prompt user to turn on Bluetooth (logic continues in onActivityResult()).
                     Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
                     startActivityForResult(enableBtIntent, Constants.REQUEST_ENABLE_BT);
                 }
             } else {
-
                 // Bluetooth is not supported.
                 showErrorText(R.string.bt_not_supported);
             }
         }
+
     }
 
     @Override
@@ -87,6 +90,11 @@ public class MainActivity extends FragmentActivity {
         transaction.replace(R.id.advertiser_fragment_container, advertiserFragment);
 
         transaction.commit(); */
+    }
+
+    private void accessPairing(View view) {
+        pairingButton = (Button)findViewById(R.id.pairingButton);
+        pairingButton.setOnClickListener(new View.OnClickListener);
     }
 
     private void showErrorText(int messageId) {

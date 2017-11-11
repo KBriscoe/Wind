@@ -7,6 +7,20 @@
     tools:context="wind.bluetooth.MainActivity">
 
     <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="WIND Manager"
+        android:textSize="32dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/error_textview"
         android:layout_width="300dp"
         android:layout_height="359dp"
@@ -20,19 +34,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_text" />
 
+    <Button
+        android:id="@+id/pairingButton"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="272dp"
+        android:text="Pairing"
+        app:layout_constraintEnd_toEndOf="@+id/error_textview"
+        app:layout_constraintStart_toStartOf="@+id/error_textview"
+        app:layout_constraintTop_toTopOf="@+id/error_textview" />
+
     <TextView
-        android:id="@+id/title_text"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="WIND Manager"
-        android:textSize="32dp"
+        android:layout_marginTop="44dp"
+        android:text="To access your WIND settings pair with the device!"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/error_textview"
+        app:layout_constraintStart_toStartOf="@+id/error_textview"
+        app:layout_constraintTop_toTopOf="@+id/error_textview" />
 
 
 </android.support.constraint.ConstraintLayout>
