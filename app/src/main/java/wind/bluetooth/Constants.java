@@ -12,7 +12,7 @@ public class Constants {
      * {@link https://www.bluetooth.org/en-us/specification/assigned-numbers/service-discovery}
      */
     public static final ParcelUuid Service_UUID = ParcelUuid
-            .fromString("0000b81d-0000-1000-8000-00805f9b34fb");
+            .fromString("13208DDD-0000-1000-8000-00805F9B34FB");
 
     public static final int REQUEST_ENABLE_BT = 1;
 

@@ -16,11 +16,10 @@ import android.widget.*;
 import android.view.View;
 
 public class MainActivity extends FragmentActivity {
-    //final String PREFS_NAME = "MyPrefsFile";
-    //SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
     private BluetoothAdapter mBluetoothAdapter;
     private Button pairingButton;
+
     //Would prefer not to use a @RequiresApi
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
@@ -94,7 +93,15 @@ public class MainActivity extends FragmentActivity {
 
     private void accessPairing(View view) {
         pairingButton = (Button)findViewById(R.id.pairingButton);
-        pairingButton.setOnClickListener(new View.OnClickListener);
+        pairingButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, PairActivity.class);
+
+                startActivity(intent);
+            }
+        });
     }
 
     private void showErrorText(int messageId) {
