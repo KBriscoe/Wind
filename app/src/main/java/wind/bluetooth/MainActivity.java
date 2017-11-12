@@ -8,8 +8,6 @@ import android.content.Intent;
 import android.widget.*;
 import android.view.View;
 
-import java.util.Set;
-
 public class MainActivity extends Activity {
     private BluetoothAdapter mBluetoothAdapter;
     private Button pairingButton;
