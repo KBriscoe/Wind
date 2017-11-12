@@ -71,7 +71,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(MainActivity.this, PairActivity.class);
+                Intent intent = new Intent(MainActivity.this, DeviceScanActivity.class);
 
                 startActivity(intent);
             }
