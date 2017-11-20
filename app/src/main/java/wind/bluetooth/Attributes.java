@@ -9,8 +9,10 @@ public class Attributes {
     public static String WIND = "13208DDD-0000-1000-8000-00805F9B34FB";
     public static String CLIENT_CHARACTERISTIC_CONFIG = "13208DDD-0000-1000-8000-00805F9B34FB";
 
+
     static {
         // Sample Services.
+
         attributes.put("13208DDD-0000-1000-8000-00805F9B34FB", "Heart Rate Service");
         attributes.put("13208DDD-0000-1000-8000-00805F9B34FB", "Device Information Service");
         // Sample Characteristics.
