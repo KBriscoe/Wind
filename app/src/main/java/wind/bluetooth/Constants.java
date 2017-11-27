@@ -15,5 +15,9 @@ public class Constants {
             .fromString("13208DDD-0000-1000-8000-00805F9B34FB");
 
     public static final int REQUEST_ENABLE_BT = 1;
+<<<<<<< HEAD
     public static final int MY_PERMISSIONS_REQUEST_ACCESS_COARSE_LOCATION = 1;
+=======
+    public static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
+>>>>>>> 7e39f0f36ddd96034e92a9df04e0a732dcdb92cc
 }

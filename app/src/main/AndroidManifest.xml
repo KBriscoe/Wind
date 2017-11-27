@@ -6,7 +6,12 @@
 
     <uses-permission android:name="android.permission.BLUETOOTH"/>
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+=======
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+>>>>>>> 7e39f0f36ddd96034e92a9df04e0a732dcdb92cc
 
     <application android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
